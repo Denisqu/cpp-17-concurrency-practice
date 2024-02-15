@@ -9,7 +9,7 @@ namespace chapter_1
 
 inline void hello()
 {
-	std::cout << "Hello concurrent world!";
+	std::cout << "Hello concurrent world!" << std::endl;
 };
 
 inline std::thread call_hello_concurrently()
