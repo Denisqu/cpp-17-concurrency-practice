@@ -9,4 +9,7 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-2/2_thread_guard.h
         chapter-2/3_call_member_func_from_thread.h
         chapter-2/4_scoped_thread.h
-        chapter-2/5_master_and_slave_threads.h)
+        chapter-2/5_master_and_slave_threads.h
+        chapter-3/1_protecting_list_with_mutex.h
+        chapter-3/2_bypass_mutex_with_func.h
+)
