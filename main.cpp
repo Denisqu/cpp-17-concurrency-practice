@@ -7,6 +7,9 @@
 
 int main() {
 	std::cout << "hardware_concurrency() = " << std::thread::hardware_concurrency() << std::endl;
+	if (true) {
+		std::cout << "true..." << std::endl;
+	}
 
     return 0;
 }
