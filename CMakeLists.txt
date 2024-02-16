@@ -16,4 +16,6 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-3/4_lock_two_mutexes_simultaneous.h
         chapter-3/5_hierarchical_mutex.h
         chapter-3/6_get_lock.h
+        chapter-3/7_infamous_double_checking_and_call_once.h
+        chapter-3/8_shared_mutex_dns_cache.h
 )
