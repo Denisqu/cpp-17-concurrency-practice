@@ -20,4 +20,6 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-3/8_shared_mutex_dns_cache.h
         chapter-4/1_wait_for_data_with_condiitonal_variable.h
         chapter-4/2_threadsafe_queue.h
+        chapter-4/3_async_future.h
+        chapter-4/4_packaged_task.h
 )

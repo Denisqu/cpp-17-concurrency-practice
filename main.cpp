@@ -1,8 +1,6 @@
 #include <iostream>
 #include <stdexcept>
-#include "chapter-1/1_hello_world.h"
-#include "chapter-2/1_read_danglign_reference_from_detached_thread.h"
-#include "chapter-2/2_thread_guard.h"
+#include "chapter-4/3_async_future.h"
 
 
 int main() {
@@ -10,6 +8,14 @@ int main() {
 	if (true) {
 		std::cout << "true..." << std::endl;
 	}
+
+	auto futer_1 = chapter_4::getFuture(2);
+	auto futer_2 = chapter_4::getFuture(4);
+
+	using namespace std::literals::chrono_literals;
+
+	futer_1.wait();
+	futer_2.wait();
 
     return 0;
 }
