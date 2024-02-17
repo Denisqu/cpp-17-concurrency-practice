@@ -18,4 +18,6 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-3/6_get_lock.h
         chapter-3/7_infamous_double_checking_and_call_once.h
         chapter-3/8_shared_mutex_dns_cache.h
+        chapter-4/1_wait_for_data_with_condiitonal_variable.h
+        chapter-4/2_threadsafe_queue.h
 )
