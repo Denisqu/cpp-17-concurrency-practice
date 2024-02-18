@@ -22,4 +22,5 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-4/2_threadsafe_queue.h
         chapter-4/3_async_future.h
         chapter-4/4_packaged_task.h
+        chapter-4/5_parallel_quick_sort.h
 )
