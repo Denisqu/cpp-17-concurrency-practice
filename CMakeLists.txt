@@ -23,4 +23,9 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-4/3_async_future.h
         chapter-4/4_packaged_task.h
         chapter-4/5_parallel_quick_sort.h
+        chapter-4/6_message_passing_atm_architecture.h
+        chapter-4/7_future_continuation.h
+        chapter-4/8_latches.h
+        chapter-4/9_barriers.h
+        chapter-4/10_flex_barriers.h
 )
