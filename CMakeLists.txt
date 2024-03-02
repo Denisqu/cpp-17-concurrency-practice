@@ -28,4 +28,9 @@ add_executable(cpp17_concurrency_practice main.cpp
         chapter-4/8_latches.h
         chapter-4/9_barriers.h
         chapter-4/10_flex_barriers.h
+        presentation-examples/example_1.h
+        presentation-examples/example_2.h
+        presentation-examples/example_3.h
+        presentation-examples/example_4.h
+        presentation-examples/example_5.h
 )
