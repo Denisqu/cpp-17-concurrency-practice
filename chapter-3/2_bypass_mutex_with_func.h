@@ -11,7 +11,6 @@ class some_data
 {
 	int a;
 	std::string b;
-
 public:
 	void do_something();
 };
@@ -21,7 +20,6 @@ class data_wrapper
 private:
 	some_data data;
 	std::mutex m;
-
 public:
 	template<typename Function>
 	void process_data(Function func)
@@ -32,18 +30,17 @@ public:
 };
 
 some_data *unprotected;
+data_wrapper x;
 
 void malicious_func(some_data &protected_data)
 {
 	unprotected = &protected_data;
 }
 
-data_wrapper x;
-
 void foo()
 {
 	x.process_data(malicious_func);
-	unprotected->do_something(); // Беда, получили доступ к защищенным данным вне мьютекса
+	unprotected->do_something(); // trouble. got access to protected data outside the mutex
 }
 
 }

@@ -15,8 +15,13 @@ inline void hello()
 inline std::thread call_hello_concurrently()
 {
 	std::thread t(hello);
-
 	return t;
+}
+
+void execute_example_1() {
+    std::cout << "hello from main thread!" << std::endl;
+    auto thread = call_hello_concurrently();
+    thread.join();
 }
 
 }

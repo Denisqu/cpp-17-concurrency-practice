@@ -5,11 +5,13 @@
 #include <memory>
 #include <mutex>
 #include <stack>
+#include <chrono>
+#include <iostream>
 
 namespace chapter_3
 {
 
-struct empty_stack: std::exception
+struct empty_stack : std::exception
 {
 	[[nodiscard]] const char *what() const noexcept override {
 		return "Empty stack!";
@@ -67,6 +69,49 @@ public:
 
 };
 
+void execute_example_3() {
+    using namespace std::chrono_literals;
+    threadsafe_stack<int> stack;
+
+    auto thread_1 = std::thread([&stack](){
+        for (auto i = 0; i < 10; ++i) {
+            stack.push(i);
+            std::this_thread::sleep_for(50ms);
+        }
+    });
+
+    auto thread_2 = std::thread([&stack](){
+        while(true) {
+            try {
+                std::this_thread::sleep_for(100ms);
+                auto value = stack.pop();
+                std::cout << "got value: " << *value << std::endl;
+            }
+            catch (std::exception& err) {
+                std::cout << err.what();
+                break;
+            }
+        }
+    });
+
+    thread_1.join();
+    thread_2.join();
 }
+
+}
+/*
+got value: 1
+got value: 3
+got value: 5
+got value: 6
+got value: 8
+got value: 9
+got value: 7
+got value: 4
+got value: 2
+got value: 0
+Empty stack!
+*/
+
 
 #endif //INC_3_THREAD_SAFE_STACK_H
