@@ -6,6 +6,7 @@
 #include "chapter-3/1_protecting_list_with_mutex.h"
 #include "chapter-3/3_thread_safe_stack.h"
 #include "chapter-4/3_async_future.h"
+#include "chapter-4/9_barriers.h"
 
 namespace {
     int oldMain() {
@@ -28,5 +29,5 @@ namespace {
 }
 
 int main() {
-    chapter_4::execute_example_3();
+    chapter_4::execute_example_9();
 }
