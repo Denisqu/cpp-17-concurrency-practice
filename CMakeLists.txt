@@ -33,4 +33,11 @@ add_executable(cpp17_concurrency_practice main.cpp
         presentation-examples/example_3.h
         presentation-examples/example_4.h
         presentation-examples/example_5.h
+        chapter-6/1_fine_grained_threadsafe_queue.h
+        chapter-6/2_fine_grained_threadsafe_hashmap.h
+        chapter-6/2_fine_grained_threadsafe_hashmap.h
+        chapter-7/1_lockfree_queue.h
+        chapter-7/1_lockfree_queue.h
+        chapter-8/1_parallel_quicksort_using_stack_of_pending_chunks_to_sort.h
+        chapter-8/1_parallel_quicksort_using_stack_of_pending_chunks_to_sort.h
 )
